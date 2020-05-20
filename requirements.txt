@@ -1,0 +1,9 @@
+django
+reportlab
+requests
+django-storages[azure]
+gunicorn
+django-heroku
+whitenoise
+dj-database-url
+psycopg2
