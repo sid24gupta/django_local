@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,19 +120,10 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
-STATIC_ROOT = 'D:/stockyard/main/static'
-
-"""DEFAULT_FILE_STORAGE = 'main.custom_azure.AzureMediaStorage'
-STATICFILES_STORAGE = 'main.custom_azure.AzureStaticStorage'
-
-STATIC_LOCATION = "farmsteel"
-MEDIA_LOCATION = "test"
-
-AZURE_ACCOUNT_NAME = "farmsteestoragec94960c0b"
-
-AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'"""
