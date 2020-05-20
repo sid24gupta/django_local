@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '^3%ls=t3_n+*qm5quv%0nvs=5npab=
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['stockpilemanagement.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
